@@ -9,7 +9,7 @@ import {CalculatorComponent} from './calculator/calculator.component'
 const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: CustomersComponent },
-    { path: 'page', loadChildren: './page/page.module#PageModule' },
+   // { path: 'page', loadChildren: './page/page.module#PageModule' },
     { path: 'admin', component: AdminComponent },
     { path: 'sales', component: HomeComponent },
     { path: 'calculator', component: CalculatorComponent },

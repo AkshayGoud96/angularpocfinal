@@ -38,6 +38,14 @@
 }
 
 .sidebar_content {
-  border-left: 1px solid;
+  border-left: 1px solid rgba(0,0,0,0.42);
   padding-left: 10px;  
+}
+
+.nav-text {
+  margin-left: 5px;
+}
+
+.nav-item {
+  color: rgba(0,0,0,0.77)
 }

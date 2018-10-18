@@ -14,9 +14,9 @@
       <mat-nav-list>
         <!-- <a mat-list-item routerLink=".">Dashboard</a>
           <a mat-list-item routerLink=".">Customers</a> -->
-        <a *ngFor="let navItem of navItems" mat-list-item routerLinkActive="active-link" (click)="start.close()"
+        <a class="nav-item" *ngFor="let navItem of navItems" mat-list-item routerLinkActive="active-link" (click)="start.close()"
           [routerLink]="[navItem.route]">
-          {{ navItem.name }}
+          <mat-icon>{{ navItem.icon }}</mat-icon><span class="nav-text">{{ navItem.name }}</span> 
         </a>
       </mat-nav-list>
 
