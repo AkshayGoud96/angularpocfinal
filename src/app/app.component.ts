@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   navItems: any[] = [
-    { name: "Dashboard", route: "dashboard" ,icon :"contact_phone"},
+    { name: "Customers", route: "dashboard" ,icon :"contact_phone"},
     { name: "Admin", route: "admin" ,icon :"web"},
     { name: "Sales", route: "sales" ,icon :"assessment"},
     { name: "Calculator", route: "calculator", icon :"dialpad" }

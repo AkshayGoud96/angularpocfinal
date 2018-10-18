@@ -21,3 +21,35 @@
   .example-full-width {
     width: 100%;
   }
+
+  .customer_section {
+    margin: 20px; 
+    border: 1px solid #E0DDDD
+  }
+  .summary_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .vertical_devider {
+    border: 1px solid #E0DDDD;
+    padding: 5px 0 ;
+    margin: 0 10px; 
+  }
+
+  .customer_section_card {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card_section_title{
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: .8em;
+    opacity: .5;
+    margin-bottom: 5px;
+  }
+  .card_section_container{
+    text-align: center;
+  }
