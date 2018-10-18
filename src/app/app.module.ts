@@ -40,6 +40,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { SummarydailogComponent } from './summarydailog/summarydailog.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     HomeComponent,
     AdminComponent,
     CustomersComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    SummarydailogComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {AdminComponent} from './admin/admin.component';
 import {CustomersComponent} from './customers/customers.component';
-import {CalculatorComponent} from './calculator/calculator.component'
+import {CalculatorComponent} from './calculator/calculator.component';
+import {SummarydailogComponent} from './summarydailog/summarydailog.component'
 
 const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'admin', component: AdminComponent },
     { path: 'sales', component: HomeComponent },
     { path: 'calculator', component: CalculatorComponent },
+    { path: 'summary', component: SummarydailogComponent },
 ];
 
 @NgModule({
