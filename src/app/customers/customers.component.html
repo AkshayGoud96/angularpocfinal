@@ -1,97 +1,11 @@
 <h4>Customer Validation</h4>
 
-<div class="validation-card">
-  <mat-card class="example-card">
-    <mat-card-header color="primary" style="justify-content: center">
-      <!-- <div mat-card-avatar class="example-header-image"></div> -->
-      <mat-card-title color="primary">
-        <h2>Validate the Customer</h2>
-      </mat-card-title>
-      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-    </mat-card-header>
-    <mat-card-content>
+<app-validate-user></app-validate-user>
 
-      <form class="example-form">
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>LAN</mat-label>
-          <input matInput placeholder="LAN" value="">
-        </mat-form-field>
+<app-customer-card></app-customer-card>
+<app-customer-card></app-customer-card>
 
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>PAN</mat-label>
-          <input matInput placeholder="PAN" value="">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>DOB</mat-label>
-          <input matInput [matDatepicker]="picker" placeholder="DOB">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <!-- <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>DOB</mat-label>
-          <input matInput placeholder="DOB" value="">
-        </mat-form-field> -->
-        <mat-form-field appearance="outline" class="example-full-width">
-          <mat-label>Saction ID</mat-label>
-          <input matInput placeholder="Saction ID" value="">
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-    <mat-card-actions style=" display: flex; justify-content: space-around">
-      <button mat-raised-button color="primary">Validate</button>
-      <button mat-stroked-button>Reset</button>
-    </mat-card-actions>
-    <!-- <mat-card-footer>
-      validation message here
-    </mat-card-footer> -->
-  </mat-card>
-</div>
-
-<div class="customer_section">
-  <mat-card >
-    <div class="customer_section_card">
-      <div (click)="openModal(hero)" class="summary_title">
-        CRMnext
-      </div>
-      <div class="vertical_devider"></div>
-      <div class="card_section_container">
-        <div class="card_section_title">Customer Details</div>
-        <div>Mani Kumar K V</div>
-        <div><a href="tel:9000123456">9000123456</a></div>
-        <div><a href="mailto: manikumarkv@gmail.com">manikumarkv@gmail.com</a></div>
-      </div>
-      <div class="vertical_devider"></div>
-      <div class="card_section_container">
-        <div class="card_section_title">Status</div>
-        <div>
-          <mat-chip-list>
-            <mat-chip color="primary" selected>Completed</mat-chip>
-          </mat-chip-list>
-        </div>
-      </div>
-      <div class="vertical_devider"></div>
-      <div class="card_section_container">
-        <div class="card_section_title">Created On</div>
-        <div>Dec 21st 2018</div>
-      </div>
-      <div class="vertical_devider"></div>
-      <div class="card_section_container">
-        <div class="card_section_title">Is Active</div>
-        <div>Yes</div>
-      </div>
-    </div>
-    <!-- <div>
-      <mat-card>
-        kjkjk
-      </mat-card>
-    </div> -->
-  </mat-card>
-</div>
-
-
-
-
-<div class="customer_section">
+<!-- <div class="customer_section">
   <mat-card class="customer_section_card">
     <div class="summary_title">
       BR.Net
@@ -123,4 +37,4 @@
       <div>Yes</div>
     </div>
   </mat-card>
-</div>
+</div> -->

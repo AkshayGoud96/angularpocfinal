@@ -41,6 +41,9 @@ import { AdminComponent } from './admin/admin.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SummarydailogComponent } from './summarydailog/summarydailog.component';
+import { SummaryTabComponent } from './summary-tab/summary-tab.component';
+import { ValidateUserComponent } from './validate-user/validate-user.component';
+import { CustomerCardComponent } from './customer-card/customer-card.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { SummarydailogComponent } from './summarydailog/summarydailog.component'
     AdminComponent,
     CustomersComponent,
     CalculatorComponent,
-    SummarydailogComponent
+    SummarydailogComponent,
+    SummaryTabComponent,
+    ValidateUserComponent,
+    CustomerCardComponent
   ],
   imports: [
     BrowserModule,
