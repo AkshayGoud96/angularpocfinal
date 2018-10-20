@@ -89,100 +89,127 @@
   <div>
     <h2>Last Transactions</h2>
   </div>
-  <table class="details-table" mat-table [dataSource]="dataSource">
+  <table class="details-table" mat-table [dataSource]="transactions">
 
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
+    <!-- srNo Column -->
+    <ng-container matColumnDef="srNo">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.srNo}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="transactionDate">
+      <th mat-header-cell *matHeaderCellDef> Transaction Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.transactionDate}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="emiDueDate">
+      <th mat-header-cell *matHeaderCellDef> EMI Due Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.emiDueDate}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-header-row *matHeaderRowDef="trasactionsColums; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: trasactionsColums;"></tr>
   </table>
+
+
   <div>
     <h2>Loan Details</h2>
   </div>
-  <table class="details-table" mat-table [dataSource]="dataSource">
+  <table class="details-table" mat-table [dataSource]="loanDetails">
 
 
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
+    <ng-container matColumnDef="srNo">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.srNo}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="lan">
+      <th mat-header-cell *matHeaderCellDef> lan </th>
+      <td mat-cell *matCellDef="let element"> {{element.lan}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="customerName">
+      <th mat-header-cell *matHeaderCellDef> customerName </th>
+      <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="mobile">
+      <th mat-header-cell *matHeaderCellDef> mobile </th>
+      <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+    </ng-container>
+    <ng-container matColumnDef="loanTenure">
+      <th mat-header-cell *matHeaderCellDef> loanTenure </th>
+      <td mat-cell *matCellDef="let element"> {{element.loanTenure}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <ng-container matColumnDef="roi">
+      <th mat-header-cell *matHeaderCellDef> roi </th>
+      <td mat-cell *matCellDef="let element"> {{element.roi}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="loanDetailsColums; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: loanDetailsColums;"></tr>
   </table>
   <div>
     <h2>Service Requests</h2>
   </div>
-  <table class="details-table" mat-table [dataSource]="dataSource">
+  <table class="details-table" mat-table [dataSource]="serviceRequests">
 
 
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
+    <ng-container matColumnDef="srNo">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.srNo}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="srId">
+      <th mat-header-cell *matHeaderCellDef> srId </th>
+      <td mat-cell *matCellDef="let element"> {{element.srId}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="callType">
+      <th mat-header-cell *matHeaderCellDef> callType </th>
+      <td mat-cell *matCellDef="let element"> {{element.callType}} </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="subyType">
+      <th mat-header-cell *matHeaderCellDef> subyType </th>
+      <td mat-cell *matCellDef="let element"> {{element.subyType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="comments">
+      <th mat-header-cell *matHeaderCellDef> comments </th>
+      <td mat-cell *matCellDef="let element"> {{element.comments}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="serviceRequestsColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: serviceRequestsColumns;"></tr>
   </table>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-customer-card',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-card.component.css']
 })
 export class CustomerCardComponent implements OnInit {
-
-  constructor() { }
+  @Input() customer: any
+  selectedUser = null
+  constructor(private customerService: CustomerService) { 
+    
+  }
 
   ngOnInit() {
+    this.selectedUser = this.customerService.getCustomer()
+  }
+  isValidUser(){
+    this.selectedUser != null
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { HomeComponent } from '../home/home.component';
 import { SummarydailogComponent } from '../summarydailog/summarydailog.component';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-customers',
@@ -9,23 +10,21 @@ import { SummarydailogComponent } from '../summarydailog/summarydailog.component
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) { }
+  isValidCustomer: boolean = false
+  isSubmitted = false
+  user = { lan: "", pan: "" }
+  customer = {}
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
   }
-
-  openModal () {
-    const dialogRef = this.dialog.open(SummarydailogComponent, {
-      width: '95%',
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      //this.animal = result;
-    });
-
+  onValidate(user) {
+    this.isValidCustomer = this.customerService.validateCustomer(user.lan, user.pan);
+    if (this.isValidCustomer) {
+      this.customer = this.customerService.getCustomer()
+    }
+    this.isSubmitted = true;
+    //this.onValidated.emit(this.isValidCustomer)
   }
 
 }

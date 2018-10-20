@@ -1,45 +1,45 @@
-<div class="customer_section">
-    <mat-card>
-      <div class="customer_section_card">
-        <div (click)="openModal()" class="summary_title">
-          CRMnext
-        </div>
-        <div class="vertical_devider"></div>
-        <div class="card_section_container">
-          <div class="card_section_title">Customer Details</div>
-          <div>Mani Kumar K V</div>
-          <div><a href="tel:9000123456">9000123456</a></div>
-          <div><a href="mailto: manikumarkv@gmail.com">manikumarkv@gmail.com</a></div>
-        </div>
-        <div class="vertical_devider"></div>
-        <div class="card_section_container">
-          <div class="card_section_title">Status</div>
-          <div>
-            <mat-chip-list>
-              <mat-chip color="primary" selected>Completed</mat-chip>
-            </mat-chip-list>
-          </div>
-        </div>
-        <div class="vertical_devider"></div>
-        <div class="card_section_container">
-          <div class="card_section_title">Created On</div>
-          <div>Dec 21st 2018</div>
-        </div>
-        <div class="vertical_devider"></div>
-        <div class="card_section_container">
-          <div class="card_section_title">Is Active</div>
-          <div>Yes</div>
+<mat-accordion>
+  <mat-expansion-panel  color="primary">
+    <mat-expansion-panel-header collapsedHeight="100px" expandedHeight="100px"     >
+      <mat-panel-title  >
+        CRMnext
+      </mat-panel-title>
+      <mat-panel-description>
+          Mani Kumar K V (9700944994)
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="customer_section_card">
+      <!-- <div class="summary_title">
+              CRMnext
+            </div>
+            <div class="vertical_devider"></div> -->
+      <div class="card_section_container">
+        <div class="card_section_title">Customer Details</div>
+        <div>Mani Kumar K V</div>
+        <div><a href="tel:9000123456">9000123456</a></div>
+        <div><a href="mailto: manikumarkv@gmail.com">manikumarkv@gmail.com</a></div>
+      </div>
+      <div class="vertical_devider"></div>
+      <div class="card_section_container">
+        <div class="card_section_title">Status</div>
+        <div>
+          <mat-chip-list>
+            <mat-chip color="primary" selected>Completed</mat-chip>
+          </mat-chip-list>
         </div>
       </div>
-    </mat-card>
-  </div>
-  
-  <mat-card class="customer_section">
-    <mat-card-header>
-      <mat-card-title>Shiba Inu</mat-card-title>
-    </mat-card-header>
-  
-    <mat-card-content>
+      <div class="vertical_devider"></div>
+      <div class="card_section_container">
+        <div class="card_section_title">Created On</div>
+        <div>Dec 21st 2018</div>
+      </div>
+      <div class="vertical_devider"></div>
+      <div class="card_section_container">
+        <div class="card_section_title">Is Active</div>
+        <div>Yes</div>
+      </div>
+    </div>
+    <div>
       <mat-tab-group dynamicHeight>
         <mat-tab label="Summary">
           <app-summary-tab></app-summary-tab>
@@ -51,9 +51,8 @@
         <mat-tab label="Omnidocs"> Content 3 </mat-tab>
         <mat-tab label="sharedfolders"> Content 3 </mat-tab>
       </mat-tab-group>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+    </div>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
