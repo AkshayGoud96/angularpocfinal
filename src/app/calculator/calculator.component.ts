@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
+  loanAmount = 1000000;
+  roi = 8.5;
+  term = 10;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getPayment(loan, intrest, time) {
+    return ((intrest / 1200.0 * loan) /
+      (1.0 - Math.pow(1.0 + intrest / 1200.00, -1.0 * time * 12.0))).toFixed(2);
   }
 
 }
