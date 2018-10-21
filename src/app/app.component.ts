@@ -8,9 +8,9 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent {
   navItems: any[] = [
     { name: "Customers", route: "dashboard" ,icon :"contact_phone"},
-    { name: "Admin", route: "admin" ,icon :"web"},
     { name: "Sales", route: "sales" ,icon :"assessment"},
-    { name: "Calculator", route: "calculator", icon :"dialpad" }
+    { name: "Calculator", route: "calculator", icon :"dialpad" },
+    { name: "Admin", route: "admin" ,icon :"web"},
   ];
   constructor(public title: Title) {}
 

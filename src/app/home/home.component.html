@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<h4 style="color: rgba(0,0,0,.54); margin-left: 20px">Sales Customizations</h4>
+
+
+<mat-card class="example-card">
+  
+  <mat-card-content>
+    <mat-form-field *ngFor="let field of fields" appearance="outline" style="width: 150px; margin:0 5px">
+      <mat-label>Field Name {{field}}</mat-label>
+      <input  matInput placeholder="Field Name {{field}}" value="">
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="addfield()" color="primary" mat-raised-button>Add New Field</button>
+    <button (click)="removeField()" mat-button>Delete</button>
+  </mat-card-actions>
+</mat-card>

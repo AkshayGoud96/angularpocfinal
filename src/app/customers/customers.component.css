@@ -53,3 +53,7 @@
   .card_section_container{
     text-align: center;
   }
+
+  .mat-chip-list-wrapper {
+    justify-content: center;
+  }

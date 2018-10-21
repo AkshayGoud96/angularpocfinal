@@ -40,8 +40,18 @@
       <button (click)="onValidate(user)" mat-raised-button color="primary">Validate</button>
       <button mat-stroked-button>Reset</button>
     </mat-card-actions>
-    <mat-card-footer *ngIf="!isValidCustomer && isSubmitted">
-      invalid data
+    <mat-card-footer style="justify-content: center;
+    width: 100%;
+    margin: 0;" *ngIf="!isValidCustomer && isSubmitted">
+
+      <div style="color: white;
+      background: #ffd740;
+      border-radius: 3px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      padding: 5px;">Customer is not available in our recorsds</div>
+
     </mat-card-footer>
   </mat-card>
 </div>
@@ -55,7 +65,7 @@
         CRMnext
       </mat-panel-title>
       <mat-panel-description>
-          {{customer.crmNext.customerName}} ({{customer.crmNext.mobile}})
+        {{customer.crmNext.customerName}} ({{customer.crmNext.mobile}})
       </mat-panel-description>
     </mat-expansion-panel-header>
     <div class="customer_section_card">

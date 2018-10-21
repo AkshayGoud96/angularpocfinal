@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  fields = [1]
   constructor() { }
 
   ngOnInit() {
+  }
+  addfield() {
+    this.fields.push(this.fields.length +1)
+  }
+  removeField() {
+    this.fields.pop()
   }
 
 }
