@@ -43,7 +43,7 @@
             <h2 style="color: rgba(0,0,0,.64)">Total Intrest</h2>₹{{(getPayment(loanAmount, roi, term)*12*term) - (loanAmount)}}
           </div>
         <div>
-          <h2 style="color: rgba(0,0,0,.64)">Total Payment (Principal + Interest)</h2>₹{{getPayment(loanAmount, roi, term)*12*term}}
+          <h2 style="color: rgba(0,0,0,.64)">Total Payment (Principal + Interest)</h2>₹{{getTotal(loanAmount, roi, term)}}
         </div>
         
         <div>
